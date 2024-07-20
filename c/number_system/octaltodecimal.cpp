@@ -18,3 +18,33 @@
 // Step 3: Take digit 3 and multiply 8 raised to power 2 with it so we get 192 and add it to sum which now becomes 229. Now n becomes zero.
 
 
+#include <iostream>
+#include <math.h>
+using namespace std;
+int OctaltoDecimal(int Octal)
+{
+  int Decimal = 0;
+  int i = 0;
+  while (Octal != 0)
+  {
+    int rem = Octal % 10;
+    Decimal += rem * pow(8, i);
+    i++;
+    Octal /= 10;
+  }
+  return Decimal;
+}
+int main()
+{
+  int Octal = 345;
+  cout <<"The decimal equivalent of the given octal number is "<<OctaltoDecimal(Octal) << endl;
+  return 0;
+}
+
+// Output:
+
+// The decimal equivalent of the given octal number is 229
+
+// Time Complexity: O(n) where n is the number of digits in the Octal Number.
+
+// Space Complexity: O(1)
