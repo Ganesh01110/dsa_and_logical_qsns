@@ -17,3 +17,26 @@
 // Now our binary number is stored in the array but in reverse order.
 // Print the array in reverse order.
 
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int n = 28;
+	int binary[32] = {0};
+	int pow = 1;
+	int i = 0;
+	while (n) {
+		binary[i] = n % 2;
+		i++;
+		n /= 2;
+	}
+	for (int ind = i - 1; ind >= 0; ind--) {
+		cout << binary[ind];
+	}
+}
+
+// 11100
+
+// Time Complexity: O(logN)
+
+// Space Complexity: O(32).
