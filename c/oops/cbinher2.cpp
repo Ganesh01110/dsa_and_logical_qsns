@@ -25,7 +25,7 @@ private:
         return Company;
     }
 
-     void setAge(string age) {
+     void setAge(int age) {
         Age = age;
     }
     int getAge(){
@@ -56,5 +56,8 @@ int main(){
 
     Employee employee2 = Employee("abc","y1-2" , 21);
     employee2.IntroduceYOurself();
+
+    employee1.setAge(39);
+    std::cout<<employee1.getName()<<"is"<<employee1.getAge()<<"at"<<employee1.getCompany()<<std::endl;
 
 }
