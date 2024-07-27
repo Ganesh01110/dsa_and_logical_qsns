@@ -2,7 +2,13 @@
 #include <iostream>
 using std::string;
 
-class Employee{
+
+// abstract class 
+class AbstartEmployee{
+   virtual void AskForPromotion()=0;
+};
+
+class Employee:AbstartEmployee {
 private:
     string Name;
     string Company;
@@ -26,6 +32,8 @@ private:
     }
 
      void setAge(int age) {
+        // wecan add validator with condition
+        if(age>=18)
         Age = age;
     }
     int getAge(){
@@ -46,18 +54,25 @@ private:
         Age = age;
 
     }
+
+    void AskForPromotion() {
+        if (Age>=30)
+          std::cout<<Name<<" is eligible for promotion "<<std::endl;
+        else
+          std::cout<<Name<<" is not eligible for promotion "<<std::endl;
+    }
 };
 
 int main(){
 
 
     Employee employee1 = Employee("ganesh"," yt" , 24);
-    employee1.IntroduceYOurself();
 
-    Employee employee2 = Employee("abc","y1-2" , 21);
+    Employee employee2 = Employee("abc","y1-2" , 32);
     employee2.IntroduceYOurself();
 
-    employee1.setAge(39);
-    std::cout<<employee1.getName()<<"is"<<employee1.getAge()<<"at"<<employee1.getCompany()<<std::endl;
+    employee1.AskForPromotion();
+    employee2.AskForPromotion();
+
 
 }
