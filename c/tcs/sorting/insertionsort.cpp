@@ -48,3 +48,9 @@ int main()
     return 0;
 }
 
+// Before insertion sort:
+// 13 46 24 52 20 9
+// After insertion sort:
+// 9 13 20 24 46 52
+
+// Time complexity: O(N2), (where N = size of the array), for the worst, and average cases.
