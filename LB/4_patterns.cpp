@@ -205,6 +205,96 @@ void hollowSquarePattern() {
     }
 }
 
+//    *
+//   ***
+//  *****
+// *******
+void midAlignedTrianglePattern() {
+    cout<< "____________"<<endl;
+    int num=5;
+    for (int i = 1; i <= num; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= num - i; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            cout << "*";
+        }
+        // Move to the next line
+        cout << endl;
+    }
+}
+
+// *******
+//  *****
+//   ***
+//    *
+//   ***
+//  *****
+// *******
+
+void hourglassPattern() {
+    cout<< "____________"<<endl;
+
+    int num=5;
+    // Print the top half of the hourglass
+    for (int i = num; i >= 1; i--) {
+        // Print leading spaces
+        for (int j = 0; j < num - i; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int k = 0; k < 2 * i - 1; k++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // Print the bottom half of the hourglass
+    for (int i = 2; i <= num; i++) {
+        // Print leading spaces
+        for (int j = 0; j < num - i; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int k = 0; k < 2 * i - 1; k++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
+void diamondPattern() {
+    cout<< "____________"<<endl;
+
+    int num=5;
+    // top of diamond
+      for (int i = 0; i <= num; i++) {
+        // Print leading spaces
+        for (int j = 0; j < num - i; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int k = 0; k < 2 * i - 1; k++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // another half
+      for (int i = num; i >= 1; i--) {
+        // Print leading spaces
+        for (int j = 0; j < num - i; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int k = 0; k < 2 * i - 1; k++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+    }
 
 
 int main() {
@@ -219,6 +309,9 @@ int main() {
    slantedStarPattern();
    rightAlignedTrianglePattern();
    hollowSquarePattern();
+   midAlignedTrianglePattern();
+   hourglassPattern();
+   diamondPattern();
 
   return 0;
 }
