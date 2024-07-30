@@ -163,6 +163,48 @@ void slantedStarPattern(){
    
 }
 
+//    *
+//   **
+//  ***
+// ****
+void rightAlignedTrianglePattern() {
+    cout<< "____________"<<endl;
+    int num=5;
+    for (int i = 1; i <= num; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= num - i; j++) {
+            cout << " ";
+        }
+        // Print stars
+        for (int k = 1; k <= i; k++) {
+            cout << "*";
+        }
+        // Move to the next line
+        cout << endl;
+    }
+}
+
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+void hollowSquarePattern() {
+     cout<< "____________"<<endl;
+    int size=5;
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            // Print stars on the border of the square
+            if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+                cout << "*";
+            } else {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
 
 
 int main() {
@@ -175,6 +217,8 @@ int main() {
    downcountTrianglePattern();
    upnextNumTrianglePattern();
    slantedStarPattern();
+   rightAlignedTrianglePattern();
+   hollowSquarePattern();
 
   return 0;
 }
