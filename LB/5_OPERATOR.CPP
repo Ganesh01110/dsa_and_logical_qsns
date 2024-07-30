@@ -36,7 +36,25 @@
  }
 
  void primenum(){
-    
+    cout<< endl;
+    int n=30;
+    for (int i=2;i<n;i++){
+        if (n%i==0){
+            cout<< n << ": is not a prime number"<<endl;
+            break;
+        }
+    }
+ }
+
+ void continueKeyword(){
+    cout<<endl;
+    for(int i=0;i<5;i++){
+        cout<<"hii"<<endl;
+        cout<<"heyy"<<endl;
+        continue;
+
+        cout<<"reply"<<endl;
+    }
  }
 
  int main(){
@@ -82,6 +100,8 @@
     withoutConditionloop();
     multipleconditionloop();
     palindromwithshift();
+    primenum();
+    continueKeyword();
 
     return 0;
  }
