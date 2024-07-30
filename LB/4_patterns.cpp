@@ -132,6 +132,38 @@ void downcountTrianglePattern(){
     }
 }
 
+// 1
+// 22
+// 333
+void upnextNumTrianglePattern(){
+    cout<< "____________"<<endl;
+    int num =5;
+   for(int i=1 ; i<=num ; i++) {
+    for (int j=1 ; j<=i ; j++ ){
+        cout<< i ;
+    }
+    cout<< endl ;
+   }
+   
+}
+
+// *
+//  *
+//   *
+  
+void slantedStarPattern(){
+    cout<< "____________"<<endl;
+    int num =5;
+   for(int i=1 ; i<=num ; i++) {
+    for (int j=1 ; j<=i ; j++ ){
+        cout<< " ";
+    }
+    cout<< "*"<<endl ;
+   }
+   
+}
+
+
 
 int main() {
    rowColPattern();
@@ -141,6 +173,8 @@ int main() {
    downNumTrianglePattern();
    upcountTrianglePattern();
    downcountTrianglePattern();
+   upnextNumTrianglePattern();
+   slantedStarPattern();
 
   return 0;
 }
