@@ -8,8 +8,16 @@ int power(int a , int b) {
     }
     return ans;
 }
+bool iseven(int n){
+    if(n&1) { //odd condition
+        return 0;
+    }
+    return 1; //0->odd,1->even
+}
 
 int evenorodd(int n){
+    int r=iseven(n);
+    cout<< " result of is even is : "<< r <<endl;
     if(n%2==0) {
         cout<< " it is a even number"<<endl;
         }
@@ -18,6 +26,8 @@ int evenorodd(int n){
         }
     return 0;
 }
+
+
 
 int primecheck(int n){
     int c=0;
