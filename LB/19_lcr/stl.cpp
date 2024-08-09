@@ -118,13 +118,14 @@ void doublyqueue(){
     // cout<<"cap->"<<d.capacity()<<endl; caapacity function doesnt work
     // cout<<"begin function:"<<d.begin()<<endl;
 
-d.erase(d.end()-1,d.end());//erase work in range
+d.erase(d.end()-1,d.end());//erase work in range 0(n)
     cout<<"size after erase from end:"<<d.size()<<endl;
     for(int i:d){
         cout<<i<<" " ;
     }
     cout<<endl; 
       
+    //   begin,end,front,back,at -> 0(1)
 
 }
 
