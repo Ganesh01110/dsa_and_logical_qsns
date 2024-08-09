@@ -1,6 +1,7 @@
 #include<iostream>
 #include<array>
 #include<vector>
+#include<deque>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ void basicArray(){
     cout<<endl;
 }
 void Arraystl(){
+    cout<<"------basics about stl funtion start------"<<endl;
     array<int , 5> a={1,2,3,4};
 
     int size=a.size();
@@ -26,13 +28,23 @@ void Arraystl(){
     cout<<"back element :"<<a.back()<<endl;
 }
 void Arrayvector(){ 
+    cout<<"------array vector funtion start------"<<endl;
     vector<int> v;
     vector<int> a(5,1);
     // if size is known previously and want to initialize every place with a specific number (here 1);
+
+    vector<int> last(a);
     cout<<"inside vector a :"<<endl;
     for(int i:a){
         cout<<i<<" " ;
     }
+    cout<<endl;
+
+    cout<<"inside vector last :"<<endl;
+    for(int i:last){
+        cout<<i<<" " ;
+    }
+    cout<<endl;
 
     cout<< v.size()<<endl;
     cout<< v.capacity()<<endl;
@@ -71,9 +83,56 @@ void Arrayvector(){
 
 }
 
+void doublyqueue(){
+    cout<<"------double queue funtion start------"<<endl;
+    // it is not a contiguous array structure like array
+    // insertuon and deletion at both end
+    // random access possible by .at and dynamic  #include<deque>
+   deque<int> d = {3,2,5,7};
+   d.pop_front();
+   cout<<"first index element:"<<d.at(1)<<endl;
+   d.push_back(1);
+   d.push_front(5);
+   cout<<"inside deq d :"<<endl;
+    for(int i:d){
+        cout<<i<<" " ;
+    }
+    cout<<endl;
+    d.pop_back();
+    for(int i:d){
+        cout<<i<<" " ;
+    }
+    cout<<endl;
+    
+    cout<<"front element :"<<d.front()<<endl;
+    cout<<"back element :"<<d.back()<<endl;
+    cout<<"empty or not :"<<d.empty()<<endl;
+
+    d.erase(d.begin(),d.begin()+1);//erase work in range
+    cout<<"size after erase:"<<d.size()<<endl;
+    for(int i:d){
+        cout<<i<<" " ;
+    }
+
+    cout<<endl;
+    // cout<<"cap->"<<d.capacity()<<endl; caapacity function doesnt work
+    // cout<<"begin function:"<<d.begin()<<endl;
+
+d.erase(d.end()-1,d.end());//erase work in range
+    cout<<"size after erase from end:"<<d.size()<<endl;
+    for(int i:d){
+        cout<<i<<" " ;
+    }
+    cout<<endl; 
+      
+
+}
+
 int main(){
     basicArray();
     Arraystl();
     Arrayvector();
+    doublyqueue();
+
     return 0;
 }
