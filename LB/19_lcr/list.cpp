@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 #include<list>
 
 using namespace std;
@@ -21,8 +21,9 @@ int main(){
      }
     cout<<endl;
     // pushback,pushfront,popback,popfront,size,begin,end->all aplicable
-    list<int> n(l); //for copying a list in another
-    cout<<"printing output after copy"<<endl;
+    list<int> n(l); 
+    //for copying a list in another
+    cout<<"printing output after copy:"<<endl;
      for(int i:n){
         cout<<i<<" ";
      }
@@ -37,5 +38,8 @@ int main(){
      }
     cout<<endl;
 
-    list<int> n(5,11);//initiatializing with a specific value
+    list<int> k(5,11);//initiatializing with a specific value
+
+
+    return 0;
 }
