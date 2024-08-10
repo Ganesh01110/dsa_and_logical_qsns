@@ -1,0 +1,7 @@
+// set file_NAME=xyz.cpp && npm run build 
+//msg="custom commit message" npm run git:commit
+//msg="custom commit message" npm run git:push
+//npm run git:push
+
+
+-----for package json----

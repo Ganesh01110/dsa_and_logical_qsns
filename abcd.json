@@ -1,0 +1,19 @@
+{
+    "name": "dsa",
+    "version": "1.0.0",
+    "description": "Bunch of dsa and logical questions.",
+    "scripts": {
+      "compile": "g++ -o main $FILE_NAME",
+      "run": "./main",
+      "build":"npm run compile && npm run run",
+      "git:add":"git add .",
+      "git:commit":"npm run git:add && git commit -m \"${msg:-\"fixed message:updated code\"}\" ",
+      "git:push":"npm run git:commit && git push origin main"
+    },
+    "keywords": [],
+    "author": "Ganesh Sahu",
+    "license": "ISC"
+  }
+  
+  
+  

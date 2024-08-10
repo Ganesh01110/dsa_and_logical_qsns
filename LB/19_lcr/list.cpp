@@ -31,6 +31,7 @@ int main(){
 
     
      n.push_back(5);
+     
      n.push_front(8);
      cout<<"printing output after copy"<<endl;
      for(int i:n){
