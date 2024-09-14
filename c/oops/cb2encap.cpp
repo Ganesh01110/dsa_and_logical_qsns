@@ -18,16 +18,16 @@ private:
         return Name;
     }
 
-     void setCompany(string company) {
+    void setCompany(string company) {
         Company = company;
     }
     string getCompany(){
         return Company;
     }
 
-     void setAge(int age) {
-        // wecan add validator with condition
-        if(age>=18)
+    void setAge(int age ) {
+        // wecan add validator/password with condition which we received from args
+        if(age >=18 )
         Age = age;
     }
     int getAge(){

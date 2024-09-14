@@ -25,7 +25,6 @@ class Employee{
         Name = name; 
         Company = company;
         Age = age;
-
     }
 };
 
