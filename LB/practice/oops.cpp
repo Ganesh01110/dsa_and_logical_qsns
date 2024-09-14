@@ -114,3 +114,24 @@ int main() {
 
     return 0;
 }
+
+
+/*
+Encapsulation:
+
+The data members name and age in the Person class are private. They are accessed and modified using public getter and setter methods, which ensures that the internal details are hidden from outside.
+Inheritance:
+
+The Student class inherits from the Person class. It reuses the Person attributes and adds its own (studentID). The displayInfo function is overridden to provide specific behavior.
+Polymorphism:
+
+Function Overloading: The Calculator class demonstrates overloading of the add function, which accepts different types of parameters (int, double).
+Function Overriding: The Student class overrides the displayInfo function of the Person class to display additional information.
+Virtual Function: The base class Person has a virtual function displayInfo to support dynamic polymorphism.
+Abstraction:
+
+The Course class is an abstract class (it contains a pure virtual function courseDetails). This ensures that any class inheriting from Course must implement this function.
+Operator Overloading:
+
+The Complex class demonstrates overloading the + operator to add two complex numbers.
+*/
