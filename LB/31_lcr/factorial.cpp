@@ -24,3 +24,7 @@ int main() {
 
     return 0;
 }
+
+// a recursion always has tw parts 
+//-base case -> shows where to stop (writing return is mandatory ), if base case absent it shows segmentation fault
+//-recursion relation -> establishes connection between big an dsmall problem
