@@ -13,6 +13,17 @@ int factorial(int n) {
     return biggerProblem;
 }
 
+int power(int n){
+    //base case
+    if(n ==0)
+     return 1;
+
+    int smallerProblem = power(n-1);   
+    int biggerProblem = 2 * smallerProblem;
+
+    return biggerProblem;
+}
+
 int main() {
 
     int n;
@@ -20,7 +31,10 @@ int main() {
 
     int ans = factorial(n);
 
+    int ans1 = power(n);
+
     cout << ans << endl;
+    cout << ans1 << endl;
 
     return 0;
 }
